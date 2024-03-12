@@ -1,4 +1,4 @@
-# Part of a case-study #2: Credits
+# Part of a case-study #3: Taxes
 # Developers: Loseva Ekaterina, Shcherbina Ekaterina, Nesterova Alexandra
 #
 
