@@ -79,5 +79,4 @@ match category:
 print(f'{ru.YEAR_TAX}', tax)
 print(f'{ru.MONTH_TAX}', round(tax/12, 2))
 
-if __name__ == '__main__':
-    main()
+
