@@ -6,6 +6,7 @@ import ru_local as ru
 
 MAX_MONTH = 12
 
+
 def free_tax():
     '''
     The function determines the annual tax-free amount.
@@ -15,6 +16,7 @@ def free_tax():
         value = float(input(f'{ru.FREE_TAX}', NAME [month],'[USD]: '))
         amount += value
     return amount
+    
 
 def annual_amount():
     '''
@@ -25,6 +27,7 @@ def annual_amount():
         value = float(input(f'{ru.INCOME}' ,NAME [month], '[USD]: ' ))
         amount += value
     return amount
+    
 
 def one_subject(amount):
     percents = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
@@ -37,6 +40,7 @@ def one_subject(amount):
         taxes += percents[i] * (thresholds[i + 1] - thresholds[i])
     return taxes
 
+
 def married_couple(amount):
     percents = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
     thresholds = [0, 18151, 73800, 148850, 226850, 405100, 457600]
@@ -47,6 +51,7 @@ def married_couple(amount):
     for i in range(0, max_threshold):
         taxes += percents[i] * (thresholds[i + 1] - thresholds[i])
     return taxes
+    
 
 def single_parent(amount):
     percents = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
@@ -58,6 +63,7 @@ def single_parent(amount):
     for i in range(0, max_threshold):
         taxes += percents[i] * (thresholds[i + 1] - thresholds[i])
     return taxes
+    
 
 print(f'{ru.TAX_PAYER}')
 category = int(input(f'{ru.VALUES}'))
@@ -78,6 +84,7 @@ match category:
         tax = single_parent(amount)
 print(f'{ru.YEAR_TAX}', tax)
 print(f'{ru.MONTH_TAX}', round(tax/12, 2))
+
 
 if __name__ == '__main__':
     main()
