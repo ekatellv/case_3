@@ -60,7 +60,7 @@ def single_parent(amount):
     return taxes
 
 print(f'{ru.TAX_PAYER}')
-category = int(input(f'{ru.VALUES}')
+category = int(input(f'{ru.VALUES}'))
 print(f'{ru.YEAR_INCOME}')
 amount = annual_amount()
 print(f'{ru.SUM_INCOME}', amount)
